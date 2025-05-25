@@ -1,14 +1,46 @@
-# webscrapping-project
-Primenumber assignment webscrapping
-chrome must be installed in your system 
-have to install  pip install selenium
+# 🕸️ RERA Odisha Web Scraping Project
 
-Navigates through RERA Odisha's official portal
-- Clicks through project detail pages
-- Extracts relevant information like:
-  - RERA Registration No.
-  - Project Name
-  - Promoter Name
-  - Promoter Address
-  - GST No.
-- Saves extracted data into a JSON file (`rera_top6_projects.json`)
+This project is a Python-based web scraper that automates the extraction of real estate project data from the [RERA Odisha Portal](https://rera.odisha.gov.in). It uses Selenium to navigate through project detail pages and extracts key information like project name, promoter details, GST number, and more.
+
+---
+
+## 📌 Features
+
+ Navigates to **RERA Odisha** official project listing page
+- Extracts:
+  - 🆔 RERA Registration Number
+  - 🏢 Project Name
+  - 👤 Promoter Name
+  - 📍 Promoter Address
+  - 💼 GST Number
+- Clicks into each project detail page
+- Handles dynamic page content and tab navigation
+- Stores results in `rera_top6_projects.json`
+
+---
+
+## ⚙️ Requirements
+
+> ✅ **Google Chrome must be installed on your system**  
+> ✅ **Selenium must be installed via pip**
+
+Install Selenium using:
+
+```bash
+pip install selenium
+
+---
+
+## 📁 Sample Output
+
+```json
+[
+  {
+    "rera_registration_no": "OD123456789",
+    "project_name": "Green Valley Heights",
+    "promoter_name": "ABC Developers Pvt Ltd",
+    "promoter_address": "Plot No. 123, Bhubaneswar, Odisha",
+    "gst_no": "22ABCDE1234F2Z5"
+  },
+  ...
+]
